@@ -1,0 +1,8 @@
+@value makerGreen from '/src/common/colors.css';
+
+.container {
+}
+
+.footer {
+  background-color: makerGreen;
+}

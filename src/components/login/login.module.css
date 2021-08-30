@@ -1,0 +1,9 @@
+@value makerWhite from '/src/common/colors.css';
+
+.loginSection {
+  background-color: makerWhite;
+}
+
+.title {
+  margin: 0;
+}

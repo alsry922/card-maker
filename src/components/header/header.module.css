@@ -1,0 +1,5 @@
+@value makerGreen from '/src/common/colors.css';
+
+.header {
+  background-color: makerGreen;
+}
