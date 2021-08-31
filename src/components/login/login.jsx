@@ -2,22 +2,37 @@ import React from "react";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import styles from "./login.module.css";
+import fireBaseApp from "../../service/firebase";
 
-const Login = (props) => {
+const Login = ({ authService }) => {
+  const onLogin = (event) => {
+    authService //
+      .login(event.currentTarget.textContent)
+      .then(console.log);
+  };
+
   return (
-    <div className={styles.container}>
+    <section className={styles.login}>
       <Header></Header>
       {
-        <section className={styles.loginSection}>
+        <section>
           <h1 className={styles.title}>Login</h1>
-          <div>
-            <button>Google</button>
-            <button>Github</button>
-          </div>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <button className={styles.button} onClick={onLogin}>
+                Google
+              </button>
+            </li>
+            <li className={styles.item}>
+              <button className={styles.button} onClick={onLogin}>
+                Github
+              </button>
+            </li>
+          </ul>
         </section>
       }
       <Footer></Footer>
-    </div>
+    </section>
   );
 };
 

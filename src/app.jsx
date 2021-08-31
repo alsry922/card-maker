@@ -1,11 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-import "./app.css";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
+import styles from "./app.module.css";
 import Login from "./components/login/login";
 
-function App() {
-  return <Login></Login>;
+function App({ authService }) {
+  return (
+    <div className={styles.app}>
+      <Login authService={authService}></Login>
+    </div>
+  );
 }
 
 export default App;
